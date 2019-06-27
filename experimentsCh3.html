@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Ch2</title>
+    </head>
+    <body>
+        <!--new html input types-->
+        <!--required won't submit without input-->
+        <!--patter to provide regEx of the required input-->
+        <!--autofocus selects the desired form input as page loaded-->
+        <!--autocomplete="on" to use use cookies from the user on the whole form or on specific input-->
+        <form method="post" action="http:\\www.google.com" autocomplete="on">
+            <!--color-->
+            <!--lets the user choose a color// value hexadecimal-->
+            <p>
+                <label>Color
+                    <input type="color" autofocus formnovalidate><!--formnovalidate to bypass validation-->
+                </label>
+            </p>
+            <!--input date and datetime and datetime-local and month-->
+            <p>
+                <label>date
+                    <input type="date">
+                </label>
+                <label>datetime
+                    <input type="datetime">
+                </label>
+                <label>datetime-local
+                    <input type="datetime-local">
+                </label>
+                <label>month
+                    <input type="month">
+                </label>
+                <label>week
+                    <input type="week">
+                </label>
+                <label>time
+                    <input type="time">
+                </label>
+            </p>
+
+            <!--e-mail and tel-->
+            <p>
+                <label>email
+                    <input type="email" placeholder="shit@your.home" required>
+                </label>tel
+                    <input type="tel" placeholder = "(###) ###-###"
+                    pattern = "(\d{3} +\d{3}-\d{3}">
+                <label>
+                <label>url
+                    <input type="url" placeholder="www.ooopst.true">
+                </label>
+            </p>
+
+
+            <!--number and range-->
+            <p>
+                <label>number
+                    <input type = "number"
+                    min="0" max="30" step="2" value="15">
+                </label>
+                <label>range
+                    3<input type = "range"
+                    min="3" max="60" step="3" value="14">60
+                </label>
+            </p>
+
+            <!--search input-->
+            <p>
+                <label> search
+                    <input type="search" placeholder="searchme">
+                </label>
+            </p>
+
+            <!--datalist-->
+            <p>
+                <label>datalist
+                    <input type="text" placeholder="fromList" list="list">
+                    <datalist id="list">
+                        <option value="1">
+                        <option value="123">
+                        <option value="321">
+                        <option value="145">
+                        <option value="132">
+                    </datalist>
+                </label>
+            </p>
+
+            <p>submit
+                <input type="submit" value="hohoho">
+            </p>
+        </form>
+
+        <!--page structure elements-->
+        <!--time to format time-->
+        <!--use article for subheders and that sort of stuff-->
+        <header> Here is the header
+            <figure>
+                <img src="Jenday-Conure.jpg">
+                <figcaption>parrot</figcaption>
+            </figure>
+        </header>
+        <section id="1">
+            section 1
+            <time> 2029-02-12</time>
+            <details>
+                <summary>summary of details</summary>
+                here are the detailes,huh?
+            </details>
+        </section>
+        <section id="1">
+            section 2
+            <mark>this is marked</mark>
+            0<meter min="0" max="100" value="30"></meter>100
+        </section>
+        <footer>
+        footer goes Here
+        </footer>
+    </body>
+
+</html>
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Javascript</title>
+        <link rel="stylesheet" type="text/css" href="stylesCh6.css">
+        <script type="text/javascript">
+
+            //simple ex
+            document.write("<h1 style='color:red'>");
+            document.write("hiho"+"</h1>");
+
+            //alert dialog
+            window.alert("Holy shit dude!");
+
+            //user input
+            var name = window.prompt("Enter shmenter:");//if cancel by user then returned null
+            document.writeln("<p>hi "+name+"</p>");
+
+            //adding integers
+            var firstN;
+            var secondN;
+            firstN = parseInt(window.prompt("give me a first digit:"));
+            secondN = parseInt(window.prompt("give me a second digit:"));
+            sum = firstN+secondN;
+            document.writeln("<h1> the sum is: "+sum+"</h1>");     
+
+            //conditional operator
+            var now = new Date();//to get the date
+            var hour = now.getHours();   
+            if (hour<11)
+                {document.writeln("<h1>GoodMorning</h1>");}
+            else
+                {document.writeln("<h1>There is no escape,John!</h1>");}
+
+            //conditional operator
+            document.writeln(hour>11 ? "No escape":"Good morning");
+
+            //loops
+            var i =0;
+            while (i<2){
+                i+=1;
+                document.writeln(hour>11 ? "No escape":"Good morning");
+            };
+            for (var i=0;i<3;++i){
+                document.writeln(hour>11 ? "No escape":"Good morning");
+            };
+            do{
+                i+=1;
+                document.writeln(hour>11 ? "No escape":"Good morning");
+            } while (i<2);
+            
+            //rounding a number
+            var x = 1.189999
+            x= x.toFixed(2)//round to 2 decimal points
+            document.writeln("<p> rounded "+x+"</p>");
+            //switch
+            switch (firstN)
+            {
+                case 1:
+                    document.writeln("<p>"+1+"</p>");
+                    break;
+                case 2:
+                    document.writeln("<p>"+2+"</p>");
+                    break;
+                default:
+                    document.writeln("<p> Oh my god</p>");
+                    break;
+
+            }
+
+            //break continue as expected
+
+            //logical operators && || !
+
+            //functions
+            function abc(x){
+                return Math.pow(x,2);
+            }
+
+            //random number generator
+            X= Math.random();//the random is from 0 to 1/can scale to get in different interval
+            
+
+            //random images and event handlers
+            var im1;
+            var im2;
+            var im3;
+            
+            function start(){
+                var but = document.getElementById("baton");
+                but.disabled = false;//to turn the button on and of
+                but.addEventListener("click",changeImages,false);
+                im1 = document.getElementById("im1");
+                im2 = document.getElementById("im2");
+                im3 = document.getElementById("im3");
+            }
+            function changeImages(){
+                setImage(im1);
+                setImage(im2);
+                setImage(im3);
+            }
+            function setImage(im){
+                imNum = Math.floor(Math.random()*3+1);
+                im.setAttribute("src","Jenday-Conure"+imNum+".jpg")
+            }
+
+            window.addEventListener("load",start,false)//this is called when the document is loaded
+            
+
+            //arrays
+            //init
+            x= [1,2];
+            x = [1,,2];
+            var x = new Array(12);
+            
+            //iterating
+            for (var i in x){}//iterating over indecies
+
+            //sorting
+            func lamb(a,b){return parseInt(a)-parseInt(b);}
+            x.sort(lamb);
+            //searching
+            fi = x.indexOf(1);
+            li = x.lastINdexOf(1);
+            l = x.length;//length of an array
+        </script>
+    </head>
+
+    <body>
+        <form action="#"><!--# represents the current page-->
+            <input type="button" id="baton" value="Rolllll">
+        </form>
+        <audio id= "parrotSounds" preload="auto">
+            <source src = "parrot_sounds.mp3" type = "audio/mp3">
+        </audio>
+        <ol>
+            <li><img src="Jenday-Conure1.jpg" id="im1" alt=""></li>
+            <li><img src="Jenday-Conure2.jpg" id="im2" alt=""></li>
+            <li><img src="Jenday-Conure3.jpg" id="im3" alt=""></li>
+        </ol>
+    </body>
+</html>

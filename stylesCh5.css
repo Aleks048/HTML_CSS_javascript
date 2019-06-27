@@ -1,0 +1,154 @@
+/*text shadows*/
+.textShadow {
+    text-shadow: -15px -10px 6px red;/*horiz offset, vert offset, blur radius,color*/
+}
+
+.borderRadius{
+    border: 6px solid red;
+    width:15%;
+    border-radius: 15%;
+}
+
+.boxShadow{
+    box-shadow: 15px 10px 6px blue;/*horiz offset, vert offset, blur radius,color*/
+}
+
+.backgroundGradLin{
+    margin-top:50px;
+    width:300px;
+    height:303px;
+    border: 6px solid greenyellow;
+    background: -webkit-gradient(
+        linear,left top,right bottom,
+        color-stop(0%,yellow),color-stop(50%,green),color-stop(75%,red)
+    );  
+    background: -moz-linear-gradient(
+        top left,yellow 0%,green 50%,red 75%
+    );
+    background: linear-gradient(
+        45deg,yellow 0%,green 50%,red 75%
+    );
+}
+.backgroundGradRad{
+    margin-top:50px;
+    width:300px;
+    height:303px;
+    border: 6px solid burlywood;
+    background: -webkit-radial-gradient(
+        left,yellow,red
+    );  
+    background: -moz-radial-gradient(
+        left,yellow,red
+    );
+    background: linear-gradient(
+        left,yellow,red
+    );
+}
+
+
+.textStroke{/*around the text is drawn*/
+    color:blue;
+    font-size: 200%;
+    -webkit-text-stroke: 1px black;
+}
+
+.multipleBackgroundImages{/*using several background images*/
+    width:1000px;
+    height:1003px;
+    color:blue;
+    font-size: 50px;
+    border: 6px solid red;
+    background-image: url(Jenday-Conure.jpg),url(Jenday-Conure2.jpg);
+    background-position: bottom left,100% center;/**/
+    background-origin: border-box,content-box;
+    background-repeat: no-repeat,repeat;
+}
+
+.right{
+    border:3px solid red;
+    width:510px;
+    height:10px;
+    padding: 20px 20px;
+    margin-top: 30px;
+    -webkit-box-reflect: right 5px
+        -webkit-gradient(
+            linear,left top,left bottom,from(transparent),to(green)
+        );
+}
+.borderImage{
+    border: 50px solid transparent;
+    padding: 15px;
+    width:100px;
+    margin:40px;
+    border-image: url(Jenday-Conure3.jpg) 100% repeat;
+}
+
+/*animation*/
+/*css rules*/
+@keyframes rotating{ 
+    0% {opacity:0; left:50px; top:0px;};
+    25% {opacity:1;left:0px;top:0px;};
+    50% {opacity:0;left:50px;top:100px;};
+    75% {opacity:1;left:100px;top:50px;};
+    100% {opacity:0;left:50px;top:0px;};
+}
+.animated{
+    border:6px solid red;
+    position: relative;
+    animation: rotating linear 10s 1s 10 alternate;
+   
+}
+.transition{
+    transition: transform 4s, opacity 2s;
+}
+.transition:hover{
+    border: 6px solid red;
+    transform: rotate(360deg);
+}
+@keyframes skew{
+    from{transform:skewX(20deg)};
+    to{transform:skewX(90deg)};
+}
+.skew{
+    animation: skew 4s infinite linear alternate-reverse;
+}
+
+/*flexbox*/
+.flexbox{
+    width:200px;
+    height:200px;
+    display: -webkit-box;
+    box-orient: horizontal;
+}
+.flexbox > div {
+    color:red;
+    transition: 5s ease-out;
+}
+.flexbox > div:nth-child(1){
+    background-color: blue;
+}
+.flexbox > div:nth-child(2){
+    background-color: green;
+}
+.flexbox >div:nth-child(1):hover{
+    transition: 5s ease-out;
+    width: 50px;
+    height: 100px
+}
+.flexbox >div:nth-child(2):hover{
+    transition: 5s ease-out;
+    width: 100px;
+    height: 50px
+}
+
+.multicolumns{
+    column-count: 3;
+    column-gap: 30px;/*space between columns*/
+    column-rule: 1px outset black;/*what type of line separates columns*/
+}
+
+/*media rules /to make design different depending on the design*/
+@media handheld and (max-width: 480px)
+{
+
+}

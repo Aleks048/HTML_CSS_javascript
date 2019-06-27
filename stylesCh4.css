@@ -1,0 +1,123 @@
+p {/*will use this to collect all text/font attributes*/
+    font-size:small;
+    font-weight:bold;/*used to specify boldness*/
+    text-decoration:none;/*to underline,overline,line-through*/
+    font-family:arial,sans-serif;
+    color:blue;
+    text-align: left;
+
+}
+
+
+/*tryle class and id*/
+.stylized {/*style class*/
+    font-size:large;
+    color:purple;
+}
+#stylizedElem {/*style by id*/
+    font-size:smaller;
+    color: red;
+}
+
+/*hover pseudoclass*/
+p.stylized:hover{/*hover is a pseudoclass when the mouse hovers*/
+    text-decoration:underline;
+}
+p.stylized em:hover{/*style inheritance*/
+    color:aqua;
+}
+
+/*positioning elements*/
+
+p.absolute {
+    position: absolute;
+    top:0px;/*bottom left right*/
+    right:0px;
+    z-index:1;/*higher z-index shows over lower*/
+}
+
+#relative{
+    position:relative;
+    top:-1ex/*bottom left right*/
+}
+
+/*background images*/
+body {
+    background-image: url(Jenday-Conure.jpg);
+    background-position: bottom right;/*top bottom center left right can also use lenghts  50% 30px;    */
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: blanchedalmond;
+
+    text-indent: 1em;/*to ident the text*/
+    font-style:oblique;/*none italic */
+}
+
+/*dimensions of the element*/
+p.fixed_dimension{
+    text-align: right;
+    height:80px;/*stretched 20% of the screen/ or in pixels this fixes the dimension*/
+    width:40px;
+    overflow: scroll;/*what happens when text does not fit into the field*/
+}
+
+/*box model and text flow*/
+    div {
+        text-align: center;
+        position: relative;
+        left: 25%; 
+        width: 50%;
+        border-width:6px
+    }  
+    /*combining different features of the border as classes*/    
+    .thick{
+        border-width: thick;
+    }
+    .solid{
+        border: 50px solid aquamarine;/*in one line*/
+    }
+    .doubleSolidTop{
+        border-bottom-color: red;
+        border-bottom-style: solid;
+        border-top-style:double;
+        border-left-style:double;
+        border-right-style: double;
+    }
+    .floated{
+        float :right;
+        background-color: black;
+        color:white;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+
+/*media types*/
+    @media all {
+
+    }
+    @media print{
+
+    }
+/*drop down menus*/ 
+    nav {
+        background-color: blueviolet;
+        border: 6px solid aquamarine;
+        width:10%
+    }
+    nav ul {
+        border: 2 solid red;  
+        display: none;
+        margin:0;
+        padding:0;
+    }   
+    nav:hover ul{
+        display: block;
+        list-style:none;/* type of the list markers*/
+    }
+    nav ul li{
+        background-color: white;
+        border: 6px solid aquamarine;
+    }
+    nav ul li:hover{
+        background-color: blue;
+    }

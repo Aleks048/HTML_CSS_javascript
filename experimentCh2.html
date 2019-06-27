@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+    <!--comment birch-->
+    <head>
+        <meta charset="utf-8">
+        <!--used by search engines to find site-->
+        <meta name="keyords" content="test,try,do">
+        <meta name="description" content="test site ch1">
+        <title>test</title>
+    </head>
+    
+    <body>
+        <!--text formating-->
+        <p>Paragraph</p><!--paragraph as simple as that-->
+        <hr><!--horizontal line//should not be used-->
+        <p><del>striked text</del></p><!--text to be striked by a line-->
+        <p>n<sub>subscript text</sub></p><!--text to be striked by a line-->
+        <p>n<sup>superscript text</sup></p><!--text to be striked by a line-->
+        <!--headings to represent more and less important info-->
+        <h1 id= "h1begin">Important</h1>
+        <h6>Not Important</h6>
+        <!--strong paragraph-->
+        <p><strong>I am a strong paragraph</strong></p>
+
+
+        <!--links//note we use an anchor element and then a link-->
+        <p><a href = "http://www.google.com">google</a></p><!--website-->
+        <p><a href = "mailto:ytr@gmail.com">mail</a></p><!--website-->
+
+        <!--images-->
+        <p><img src="Jenday-Conure.jpg" width="92" height = "120" alt="parrots"/></p>
+        <!--images as hyperlinks-->
+        <p>
+            <a href="http:\\www.google.com">
+            <img src="Jenday-Conure.jpg" alt="parrot">
+            </a>
+        </p>
+
+        <!--lists-->
+        <!--unordered-->
+        <ul>
+            <li>hi</li>
+            <li>ho</li>
+        </ul>
+        <!--ordered-->
+        <ol>
+            <li>first</li>
+            <li>second</li>
+        </ol>
+
+        <!--tables-->
+        <table border="1">
+            <caption>info about the table if not seen</caption>
+            <thead>
+                <tr>
+                    <th>abra</th>
+                    <th>cadabra</th>
+                <tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>footer1</th>
+                    <th>footer2</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>abra data</td>
+                    <td>cadabra data</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--using rowspan and colspan-->
+        <table border="1">
+            <caption>info about the table if not seen</caption>
+            <thead>
+                <tr>
+                    <th>abra</th>
+                    <th colspan = "2">cadabra</th>
+                <tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>footer1</th>
+                    <th >footer2</th>
+                    <th>footer 3</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th>abra data</th><!--note here-->
+                    <td>cadabra data</td>
+                    <td>3rd col</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--forms-->
+        <!--can put default text in many form by specifying the default value-->
+        <form method="post" action = "http:\\www.google.com">
+        <!--simple forms-->
+            <!--hidden inpiuts user don't see them //can use to send relevant info-->
+            <!--here used to send data to the e-mail-->
+            <input type="hidden" name="recipient" value = "ytr167@gmail.com">
+            <input type="hidden" name="subject" value = "testingForms">
+
+            <!--text form--> 
+            <!--size - number of visibe characters-->
+            <p>
+                <label>Text field:<!--label is used so that we can toggle the label and the input is toggled-->
+                    <input type="text" name = "name" size = "12" maxlength = "30">
+                    <input type="text" name = "name" size = "2" maxlength = "30">
+                </label>
+            </p>
+            <!--submit/reset-->
+            <!--submit reset filled forms-->
+            <p>
+                <label> submit-reset
+                    <input type="submit" value="SUB">
+                    <input type="reset" value = "res">
+                </label>
+            </p>
+        <!--additional form elements-->
+            <!--text area-->
+            <p>
+                <label> textarea
+                <textarea name = "area for text" nrows = "2" ncols = "30">This will be default text</textarea>
+                </label>
+            </p>
+            <!--password-->
+            <p>
+                <label>password
+                <input type="password" name="pass" size="4">
+                </label>
+            </p>
+            <!--checkboxes-->
+            <!--linked by name-->
+            <p>
+                Checkboxes
+                <label>Checkbox1
+                    <input type = "checkbox" name="ch" value="1">
+                </label>
+                <label>Checkbox2
+                    <input type = "checkbox" name="ch" value="2" checked>
+                </label>
+                <label>Checkbox3
+                    <input type = "checkbox" name="ch" value="3">
+                </label>
+            </p>
+            <!--radio buttons-->
+            <p>
+                Rdiobuttons
+                <label> 1st button
+                    <input type = "radio" name = "radBut" value = "1">
+                </label>
+                <label> 2nd button
+                    <input type = "radio" name = "radBut" value = "2" checked>
+                </label>
+                <label> 3rd button
+                    <input type = "radio" name = "radBut" value = "3">
+                </label>
+            </p>
+            <!--select-->
+            <p>
+                <label>select
+                    <select name = "select">
+                        <option>1</option>
+                        <option selected>2</option>
+                        <option>3</option>
+                    </select>
+                </label>
+            </p>
+
+        </form>    
+        <!--internal linking-->
+        <p>
+            <a href = "#h1begin">link to top</a>
+        </p>    
+    </body>
+</html>
