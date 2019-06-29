@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Ch12DOM</title>
+        <link rel="stylesheet" type="text/css" href="ch12DOM.css">
+        <script src="ch12DOM.js"></script>
+    </head>
+
+    <body>
+        <h1 id="bigHeading" class="highlighted"> [bigheading]DHTML Object Model</h1>
+        <h3 id="smallheading">[smallheading] Element Functionality</h3>
+
+        <p id="para1">[para1]Liverpool Football Club is a professional 
+        football club in Liverpool, England,
+         that competes in the Premier League, 
+         the top tier of English football. 
+         The club has won 6 European Cups,
+          more than any other English club, 
+          3 UEFA Cups, 3 UEFA Super Cups, 
+          18 League titles, 7 FA Cups, a record 
+          8 League Cups, 15 FA Community Shields and 
+          1 Football League Super Cup.
+        </p>
+        <p id="para2">[para2]Founded in 1892, the club joined the
+         Football League the following year and has played at 
+         Anfield since its formation. Liverpool established 
+         itself as a major force in English and European 
+         football in the 1970s and 1980s when Bill Shankly, 
+         Bob Paisley, Joe Fagan and Kenny Dalglish led the 
+         club to a combined eleven League titles, four European
+         Cups, two UEFA Cups, seven domestic cups and several 
+         super cups within a span of eighteen seasons. Under 
+         the management of Rafael Benítez and captained by 
+         homegrown star Steven Gerrard, Liverpool became 
+         European champions for the fifth time in 2005 before 
+         adding a sixth crown under Jürgen Klopp in 2019.
+        </p>
+        <p id="para3">
+            [para3]The demostrated list.
+            <ul id="list">
+                <li id="item1">[item1]List item 1</li>
+                <li id="item2">[item2]List item 2</li>
+                <li id="item3">[item3]List item 3</li>
+            </ul>
+        </p>
+
+        <div id = "nav"  class="nav">
+            <form onsubmit = "return false" action="#">
+                <p>
+                    <input type="text" id="gbi" value="bigheading">
+                    <input type="button" id="byIdButton" value="Get by id">
+                </p>
+
+                <p>
+                    <input type="text" id="ins" >
+                    <input type="button" id="insertButton" value="Insert Before">
+                </p>
+
+                <p>
+                    <input type="text" id="append" >
+                    <input type="button" id="appendButton" value="Append Child">
+                </p>
+
+                <p>
+                    <input type="text" id="repl" >
+                    <input type="button" id="replaceButton" value="Replace Current">
+                </p>
+
+                <p>
+                    <input type="button" id="removeButton" value="Remove Current">
+                </p>
+
+                <p>
+                    <input type="button" id="parentButton" value="Get parrent">
+                </p>
+
+            </form>
+        </div>
+
+    </body>
+</html>

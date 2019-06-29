@@ -2,3 +2,5 @@
  var sq = Math.sqrt(2);
 
  //string object
+
+ //DOM
